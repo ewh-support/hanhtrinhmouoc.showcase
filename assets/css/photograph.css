@@ -1,5 +1,5 @@
 .photograph-content {
-    background: url('../img/photograph/photograph-bg.png') no-repeat 0 0;
+    background: url('/assets/img/photograph/photograph-bg.png') no-repeat 0 0;
     background-size: 100%;
 }
 .photograph-content .tt-01{

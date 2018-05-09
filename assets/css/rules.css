@@ -1,5 +1,5 @@
 .rules-content{
-    background: url('../img/rules/rules-bg.jpg') no-repeat 0 120px;
+    background: url('/assets/img/rules/rules-bg.jpg') no-repeat 0 120px;
     background-size: 100% auto;
     background-attachment: fixed;
     position: relative;
