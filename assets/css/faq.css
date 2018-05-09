@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+.faq-content{
+	font-size: 25px;
+	/* background: url('../img/faq/bg-faq.png') no-repeat bottom center; */
+	padding-bottom: 500px;
+	
+}
+.faq-content h2{
+	color: #48b2db;
+	font-size: 80px;
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: 200;
+}
+.faq-content p, .faq-content .question{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.faq-content .question{
+	background: #48b2db;
+	padding: 5px 20px;
+	overflow: hidden;
+}
+.faq-content .question .number{
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+	font-size: 50px;
+	font-weight: 700;
+	padding-right: 20px;
+	float: left;
+}
+.faq-content .question span{
+	float: none;
+}
+@media screen and (max-width: 991px){
+.faq-content .search{
+	display:none;
+	}
+}
+@media screen and (max-width: 767px){
+.faq-content{
+	font-size: 18px;
+	}
+}

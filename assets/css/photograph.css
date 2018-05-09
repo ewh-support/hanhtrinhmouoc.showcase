@@ -1,0 +1,283 @@
+.photograph-content {
+    background: url('../img/photograph/photograph-bg.png') no-repeat 0 0;
+    background-size: 100%;
+}
+.photograph-content .tt-01{
+    padding-bottom: 40px;
+}
+.photograph-content .tt-01,
+.photograph-detail-content .tt-01{
+    line-height: 0.7;
+    letter-spacing: 8px;
+    margin: 30px 0 40px;
+}
+.photograph-content .tt-01 img,
+.photograph-detail-content .tt-01 img{
+    margin: 0 auto;
+    transform: rotate(-2deg);
+    position: relative;
+    left: 10px;
+}
+.photograph-content .photograph-element{
+    width: 100%;
+}
+.photograph-content .photograph-element .list-body{
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.photograph-content .photograph-element .tt-05{
+    padding-left: 100px;
+}
+.photograph-content .photograph-element .list-element{
+    grid-template-columns: 66% 33%;
+}
+.photograph-content .photograph-element .list-element-2{
+    grid-template-columns: 33% 66%;
+    margin: 15px 0;
+}
+.photograph-content .photograph-element .list-element .sp{
+    display: none;
+}
+.photograph-content .photograph-element .list-element .element > .element:first-child{
+    height: 100%;
+}
+.photograph-content .photograph-element .list-element .element img{
+    height: 100%;
+}
+.photograph-content .photograph-element .list-element .element-sub{
+    margin-bottom: 12px;
+}
+.photograph-content .photograph-element .control{
+    text-align: right;
+}
+.photograph-content .photograph-element .control li{
+    display: inline-block;
+    margin-left: 3px;
+}
+.photograph-content .photograph-element .control .sp{
+    display: none;
+}
+.photograph-content .photograph-element .control li button{
+    border: 1px solid #fff;
+}
+.photograph-content .photograph-element .control-2 li button{
+    border: 1px solid #0B7182;
+}
+/* Photograph Detail */
+.photograph-detail-content{
+    background: url('../img/photograph/photograph-detail-bg-1.png') no-repeat 0 0, url('../img/photograph/photograph-detail-bg-2.png') no-repeat 0 bottom;
+    background-size: 100%, 100%;
+}
+.box-detail .list-function-sp{
+    float: right;
+    padding: 20px 20px;
+}
+.footer-photograph-detail {
+    background: url('../img/photograph/photograph-detail-footer.png') no-repeat 0 0 !important;
+    background-size: 100%;
+}
+@media screen and (max-width: 1170px){
+    .photograph-content .photograph-element .list-element{
+        grid-column-gap: 1%;
+    }
+}
+@media screen and (max-width: 992px){
+    .photograph-content .photograph-element .list-body{
+        padding: 20px 20px 15px;
+    }
+    .photograph-content .photograph-element{
+        max-width: 100%;
+    }
+    .photograph-content .photograph-element .list-element{
+        grid-template-columns: repeat(1, 100%);
+        grid-column-gap: 0;
+    }
+    .photograph-content .photograph-element .list-element-2{
+        margin: 0;
+    }
+    .photograph-content .photograph-element .list-element .sp{
+        display: block !important;
+    }
+    .photograph-content .photograph-element .list-element >.element{
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        grid-column-gap: 2%;
+        margin-bottom: 15px;
+    }
+    .photograph-content .photograph-element .list-element >.one-element{
+        display: block;
+    }
+    .photograph-content .photograph-element .list-element .element-sub{
+        margin-bottom: 0;
+    }
+    .photograph-content .photograph-element .tt-05{
+        padding: 0;
+        text-align: center;
+    }
+    .photograph-content .photograph-element:last-child{
+        margin-bottom: 0;
+    }
+    /* Detail */
+    .photograph-content .tt-01{
+        margin-bottom: 50px;
+    }
+    .photograph-content .tt-01,
+    .photograph-detail-content .tt-01{
+        font-size: 80px;
+        letter-spacing: 3px;
+        margin: 0;
+        padding-top: 50px;
+    }
+    .photograph-content .tt-01 .sub-tt-01,
+    .photograph-detail-content .tt-01 .sub-tt-01{
+        font-size: 100px;
+    }
+    .photograph-content .tt-01 img,
+    .photograph-detail-content .tt-01 img{
+        margin: 0 auto;
+        width: 350px;
+    }
+    .body-detail-content{
+        background: url('../img/blog/blog-bg-top.png') no-repeat 0 0;
+        background-size: 100%;
+    }
+    .blog-detail-body .tt-01{
+        font-size: 150px;
+        margin-top: 40px;
+    }
+    .blog-detail-body .sub-tt-01{
+        font-size: 100px;
+    }
+    .blog-detail-body .tt-01 img{
+        margin: -40px auto 0;
+    }
+    .box-detail{
+        padding: 0;
+        border: 0;
+        background: transparent;
+    }
+    .box-detail .gr-info{
+        border-top: 1px solid #26AFD8;
+        border-bottom: 1px solid #26AFD8;
+    }
+    .box-detail .author{
+        background: none;
+        float: left;
+        width: 60%;
+    }
+    .box-detail .author span{
+        color: #26AFD8;
+        font-family: 'Roboto Bold', sans-serif;
+        letter-spacing: 0;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        display: inline-block;
+        padding: 1px 10px;
+    }
+    .box-detail .author > span{
+        padding-top: 12px;
+    }
+    .box-detail .author span .text{
+        display: block;
+    }
+    .box-detail .author span .text:last-child{
+        font-family: 'Roboto Light', sans-serif;
+    }
+    .box-detail .author img{
+        width: 70px;
+        float: left;
+    }
+    .box-content{
+        padding: 20px 20px 50px;
+    }
+    .box-content ul{
+        display: none;
+    }
+    /* Photograph Detail */
+    .list-related .list-element{
+        grid-template-columns: repeat(1, 100%);
+        grid-column-gap: 0;
+    }
+    .list-related .list-element .element{
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 768px){
+    .photograph-content .photograph-element .list-element >.element{
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-column-gap: 0;
+        margin-bottom: 0;
+    }
+    .photograph-content .photograph-element .list-element .element{
+        margin-bottom: 15px;
+    }
+    .photograph-content .photograph-element .list-element .element > .element:first-child{
+        height: auto;
+    }
+    .photograph-content .tt-01,
+    .photograph-detail-content .tt-01{
+        font-size: 70px;
+        letter-spacing: 2px;
+    }
+    .photograph-content .tt-01 .sub-tt-01,
+    .photograph-detail-content .tt-01 .sub-tt-01{
+        font-size: 80px;
+    }
+    .photograph-content .tt-01 img,
+    .photograph-detail-content .tt-01 img{
+        width: 220px;
+    }
+}
+@media screen and (max-width: 660px){
+    .photograph-content .photograph-element .list-element > .element{
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-column-gap: 0;
+    }
+    .photograph-content .photograph-element .list-element .element {
+        margin-bottom: 15px;
+    }
+    .photograph-content .photograph-element .list-element .element:last-child{
+        margin-bottom: 0;
+    }
+    .photograph-content .photograph-element .list-element .element > .element:first-child{
+        height: auto;
+    }
+}
+@media screen and (max-width: 425px){
+    .photograph-content .photograph-element .list-body{
+        padding: 10px;
+    }
+    .box-content{
+        padding: 20px 20px 0;   
+    }
+    .box-detail .author{
+        box-sizing: border-box;
+    }
+    .box-detail .list-function-sp{
+        float: right;
+        padding: 5px 10px 0 0;
+        text-align: right;
+        box-sizing: border-box;
+    }
+    .box-detail .author img{
+        width: 50px;
+    }
+    .list-element .element .info .name{
+        margin-top: 8px;
+    }
+    /* Photograph Detail */
+    .list-related .list-element{
+        padding: 15px 0 0;
+        border: 0;
+    }
+}
+@media screen and (max-width: 375px){
+    .list-element .element .info .name{
+        width: 100px;
+        line-height: 1.4;
+        margin-top: 5px;
+    }
+}

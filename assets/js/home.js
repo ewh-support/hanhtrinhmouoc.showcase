@@ -12,7 +12,9 @@ setTimeout( function(){
     $('.sec1 .time-frame').addClass('show');
 }  , 12000 );
 var prize = 1846;
-prize = $('.prize').offset().top - 400;
+if ($('div').attr('prize') != undefined)
+    prize = $('.prize').offset().top - 400;
+
 $(window).scroll(function(){
     if($(window).scrollTop() > prize){
         $('.sec2-img4').addClass('show');
