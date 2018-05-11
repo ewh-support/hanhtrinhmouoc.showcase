@@ -14,9 +14,14 @@ window.document.ready = function () {
     } else {
         PopUp('hide');
     }
-    // localStorage.clear();
+    localStorage.clear();
 
 }
+/* onClose */
+function onClose(){
+    PopUp('hide');
+}
+
 
 /* Validate */
 
