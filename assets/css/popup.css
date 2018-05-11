@@ -7,6 +7,7 @@
     background: rgba(255, 255, 255, .6);
     z-index: 10000;
 }
+
 #popup {
     width: 555px;
     height: 375px;
@@ -21,6 +22,4 @@
     position: relative;
     top: 150px;
     left: 375px;
-    background-image: url('assets/img/background.png');
-    
 }
