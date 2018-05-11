@@ -7,14 +7,14 @@ window.document.ready = function () {
     console.log('window.localStorage;', window.localStorage);
     console.log('localStorage.setVal', localStorage.setVal);
     
-    // PopUp('show');
+    PopUp('hide');
     
-    if (localStorage.setVal == undefined) {
-        PopUp('show');
-    } else {
-        PopUp('hide');
-    }
-    localStorage.clear();
+    // if (localStorage.setVal == undefined) {
+    //     PopUp('show');
+    // } else {
+    //     PopUp('hide');
+    // }
+    // localStorage.clear();
 
 }
 /* onClose */
