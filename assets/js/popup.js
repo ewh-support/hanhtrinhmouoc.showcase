@@ -9,11 +9,11 @@ window.document.ready = function () {
     
     PopUp('hide');
     
-    // if (localStorage.setVal == undefined) {
-    //     PopUp('show');
-    // } else {
-    //     PopUp('hide');
-    // }
+    if (localStorage.setVal == undefined) {
+        PopUp('show');
+    } else {
+        PopUp('hide');
+    }
     // localStorage.clear();
 
 }
