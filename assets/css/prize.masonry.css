@@ -27,113 +27,111 @@
 }*/
 
 .masonry {
-  -webkit-column-count: 1;
-          column-count: 1;
-  -webkit-column-gap: 0;
-          column-gap: 0;
-  counter-reset: item-counter;
+    -webkit-column-count: 1;
+    column-count: 1;
+    -webkit-column-gap: 0;
+    column-gap: 0;
+    counter-reset: item-counter;
 }
+
 @media screen and (max-width: 767px) {
-  .masonry {
-    -webkit-column-count: 2;
-            column-count: 2;
-  }
+    .masonry {
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
 }
+
 @media screen and (min-width: 800px) {
-  .masonry {
-    -webkit-column-count: 4;
-            column-count: 4;
-  }
+    .masonry {
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
 }
 
 .item {
-  box-sizing: border-box;
-  -webkit-column-break-inside: avoid;
-          break-inside: avoid;
-  padding: 2.5px;
-  counter-increment: item-counter;
+    box-sizing: border-box;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    padding: 2.5px;
+    counter-increment: item-counter;
 }
+
 .item__content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 220px;
-  box-sizing: border-box;
-  background-size: cover !important;	
-		
-}
-.item__content--large{
-	height: 440px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    box-sizing: border-box;
+    background-size: cover !important;
 }
 
+.item__content--large {
+    height: 440px;
+}
 
-.month .item:first-child .item__content{
-	background: url(../img/prize/prize-1.jpg) no-repeat top center;
+.month .item:first-child .item__content {
+    background: url(/assets/img/prize/prize-1.jpg) no-repeat top center;
 }
-.month .item:nth-child(2) .item__content{
-	background: url(../img/prize/prize-2.jpg) no-repeat top center;
+
+.month .item:nth-child(2) .item__content {
+    background: url(/assets/img/prize/prize-2.jpg) no-repeat top center;
 }
-.month .item:nth-child(3) .item__content{
-	background: url(../img/prize/prize-3.jpg) no-repeat top center;
+
+.month .item:nth-child(3) .item__content {
+    background: url(/assets/img/prize/prize-3.jpg) no-repeat top center;
 }
-.month .item:nth-child(4) .item__content{
-	background: url(../img/prize/prize-4.jpg) no-repeat top center;
+
+.month .item:nth-child(4) .item__content {
+    background: url(/assets/img/prize/prize-4.jpg) no-repeat top center;
 }
-.month .item:nth-child(5) .item__content{
-	background: url(../img/prize/prize-5.jpg) no-repeat top center;
+
+.month .item:nth-child(5) .item__content {
+    background: url(/assets/img/prize/prize-5.jpg) no-repeat top center;
 }
-.month .item:nth-child(6) .item__content{
-	background: url(../img/prize/prize-6.jpg) no-repeat top center;
+
+.month .item:nth-child(6) .item__content {
+    background: url(/assets/img/prize/prize-6.jpg) no-repeat top center;
 }
+
 @media screen and (max-width: 767px) {
-	.special-prize .item:first-child .item__content{
-		background: url(../img/rules/term-1.jpg) no-repeat -300px top;
-	}
-	.special-prize .item:nth-child(2) .item__content{
-		background: url(../img/rules/term-3.jpg) no-repeat center center;
-	}
-	.special-prize .item:nth-child(3) .item__content{
-		background: url(../img/rules/term-2.jpg) no-repeat top center;
-	}
-	.special-prize .item:nth-child(4) .item__content{
-		background: url(../img/rules/term-4.jpg) no-repeat top center;
-	}
-	.special-prize .item:nth-child(5) .item__content{
-		background: url(../img/rules/term-5.jpg) no-repeat top center;
-	}
-	.special-prize .item:nth-child(6) .item__content{
-		background: url(../img/rules/term-6.jpg) no-repeat -300px top;
-	}
-
-	
+    .special-prize .item:first-child .item__content {
+        background: url(/assets/img/rules/term-1.jpg) no-repeat -300px top;
+    }
+    .special-prize .item:nth-child(2) .item__content {
+        background: url(/assets/img/rules/term-3.jpg) no-repeat center center;
+    }
+    .special-prize .item:nth-child(3) .item__content {
+        background: url(/assets/img/rules/term-2.jpg) no-repeat top center;
+    }
+    .special-prize .item:nth-child(4) .item__content {
+        background: url(/assets/img/rules/term-4.jpg) no-repeat top center;
+    }
+    .special-prize .item:nth-child(5) .item__content {
+        background: url(/assets/img/rules/term-5.jpg) no-repeat top center;
+    }
+    .special-prize .item:nth-child(6) .item__content {
+        background: url(/assets/img/rules/term-6.jpg) no-repeat -300px top;
+    }
 }
+
 @media screen and (max-width: 420px) {
-	.special-prize .item:first-child .item__content{
-		background: url(../img/rules/term-1.jpg) no-repeat -400px top;
-	}
-	.special-prize .item:nth-child(2) .item__content{
-		background: url(../img/rules/term-3.jpg) no-repeat top center;
-		background-position-x: -60px;
-	}
-	.special-prize .item:nth-child(3) .item__content{
-		background: url(../img/rules/term-2.jpg) no-repeat -110px top;
-	}
-	.special-prize .item:nth-child(6) .item__content{
-		background: url(../img/rules/term-6.jpg) no-repeat -450px top;
-	}
-	.month .item:nth-child(3) .item__content{
-		background: url(../img/prize/prize-3.jpg) no-repeat top center;
-		background-position-x: -150px;
+    .special-prize .item:first-child .item__content {
+        background: url(/assets/img/rules/term-1.jpg) no-repeat -400px top;
+    }
+    .special-prize .item:nth-child(2) .item__content {
+        background: url(/assets/img/rules/term-3.jpg) no-repeat top center;
+        background-position-x: -60px;
+    }
+    .special-prize .item:nth-child(3) .item__content {
+        background: url(/assets/img/rules/term-2.jpg) no-repeat -110px top;
+    }
+    .special-prize .item:nth-child(6) .item__content {
+        background: url(/assets/img/rules/term-6.jpg) no-repeat -450px top;
+    }
+    .month .item:nth-child(3) .item__content {
+        background: url(/assets/img/prize/prize-3.jpg) no-repeat top center;
+        background-position-x: -150px;
+    }
 }
-
-}
-
-
-
-
-
-
-
-

@@ -1,5 +1,7 @@
 $(document).ready(function () {
-    var rules_top = $('.rules-body').offset().top - 100;
+    if ($('.rules-body').length) {
+        var rules_top = $('.rules-body').offset().top - 100;
+    }
     var running = false;
 
     $(window).scroll(function () {
