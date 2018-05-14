@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 .faq-content{
 	font-size: 25px;
-	background: url('/assets/img/faq/bg-faq.png') no-repeat bottom center;
+	background: url('../img/faq/bg-faq.png') no-repeat bottom center;
 	padding-bottom: 500px;
 	
 }

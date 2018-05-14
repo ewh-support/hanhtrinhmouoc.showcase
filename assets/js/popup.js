@@ -6,14 +6,14 @@ function PopUp(hideOrshow) {
 window.document.ready = function () {
     ////console.log('localStorage.setVal', localStorage.setVal);
     
-    // PopUp('hide');
+    PopUp('hide');
     // //console.log('window.localStorage;', window);
     
-    if (localStorage.hideRegisterDialog == undefined || localStorage.hideRegisterDialog == 'false') {
-        PopUp('show');
-    } else {
-        PopUp('hide');
-    }
+    // if (localStorage.hideRegisterDialog == undefined || localStorage.hideRegisterDialog == 'false') {
+    //     PopUp('show');
+    // } else {
+    //     PopUp('hide');
+    // }
     // localStorage.clear();
 
 }
