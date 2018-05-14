@@ -24,11 +24,10 @@ $(document).ready(function () {
         if ($(window).width() >= 992) {
             $('body').removeClass('show-menu');
             $('.widget > .inner-widget > img').attr('src', '/img/general/widget-bao-thanh-nien.jpg');
-        } else {
+        }
+        else {
             $('.widget > .inner-widget > img').attr('src', '/img/general/widget-didong.jpg');
-            $(".widget").css({
-                'height': 'inherit'
-            });
+            $(".widget").css({ 'height': 'inherit' });
         }
 
         $(window).scroll();
@@ -36,33 +35,27 @@ $(document).ready(function () {
 
     var body_height = $(window).height();
     $(window).scroll(function () {
-
+        
         if ($(window).width() < 992) return false;
 
         var scroll = $(window).scrollTop();
         if (scroll > 120) {
             $(".widget").addClass("fixed");
-            $(".widget").css({
-                'height': (body_height - 20) + 'px'
-            });
-        } else {
+            $(".widget").css({ 'height': (body_height - 20) + 'px' });
+        }
+        else {
             $(".widget").removeClass("fixed");
-            $(".widget").css({
-                'height': 'inherit'
-            });
+            $(".widget").css({ 'height': 'inherit' });
         }
 
         var bottom = $('body').height() - 810 - $('footer').height();
         if (scroll > bottom) {
             $(".widget").addClass("bottom");
-            $(".widget").css({
-                'bottom': ($('footer').height() + 80) + 'px'
-            });
-        } else {
+            $(".widget").css({ 'bottom': ($('footer').height() + 80) + 'px' });
+        }
+        else {
             $(".widget").removeClass("bottom");
-            $(".widget").css({
-                'bottom': 'inherit'
-            });
+            $(".widget").css({ 'bottom': 'inherit' });
         }
     }).scroll();
 
@@ -73,11 +66,10 @@ $(document).ready(function () {
     //         $('.logoutForm img').attr('src', data.UserLogin.UserAvatarUri);
     //         $('.send-photo-body .avatar > img').attr('src', data.UserLogin.UserAvatarUri);
     //         $('.send-photo-body .author').html('Tác giả # ' + data.UserLogin.UserName);
-    //     } else {
+    //     }
+    //     else {
     //         $('.login.logged, .login-mobile.logged').remove();
-    //         $('.login, .login-mobile').css({
-    //             'display': 'inline-block'
-    //         });
+    //         $('.login, .login-mobile').css({ 'display': 'inline-block' });
     //     }
     // });
 
@@ -123,12 +115,11 @@ var VoteWidget = {
         //count = parseInt(current_count);
         //if (isNaN(count)) count = 0;
         //count++;
-        $.post('/Post/Vote', {
-            id: voteCount.closest('ul').data('id')
-        }, function (data, status) {
+        $.post('/Post/Vote', { id: voteCount.closest('ul').data('id') }, function (data, status) {
             if (data.success) {
                 voteCount.toggleClass('bumped').text(data.count);
-            } else {
+            }
+            else {
 
             }
         });
