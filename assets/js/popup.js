@@ -4,10 +4,10 @@ function PopUp(hideOrshow) {
 }
 
 window.document.ready = function () {
-    //console.log('localStorage.setVal', localStorage.setVal);
+    ////console.log('localStorage.setVal', localStorage.setVal);
     
     // PopUp('hide');
-    // console.log('window.localStorage;', window);
+    // //console.log('window.localStorage;', window);
     
     if (localStorage.hideRegisterDialog == undefined || localStorage.hideRegisterDialog == 'false') {
         PopUp('show');
@@ -44,12 +44,13 @@ function submitData() {
 
             })
             .then(function (response) {
-                console.log('axios res', response);
+                //console.log('axios res', response);
+                console.log('res');
                 alert('Cảm ơn bạn đã đăng ký tham gia chương trình !');
                 PopUp('hide');
             })
             .catch(function (error) {
-                console.log('axios err', error);
+                //console.log('axios err', error);
             });
 
         if (typeof (Storage) !== "undefined") {

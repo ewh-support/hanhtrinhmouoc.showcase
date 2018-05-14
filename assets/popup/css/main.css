@@ -199,7 +199,7 @@ iframe {
   background-size: cover;
   background-position: center;
 
-  padding: 64px 15px 64px 15px;
+  padding: 20px 5px 20px 5px;
 }
 
 .contact100-form-title-1 {
@@ -245,7 +245,8 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 43px 88px 57px 190px;
+  padding: 23px 88px 27px 190px;
+  
 }
 
 
@@ -399,13 +400,13 @@ textarea.input100 {
 
 @media (max-width: 576px) {
   .contact100-form {
-    padding: 43px 15px 57px 117px;
+    padding: 43px 15px 37px 117px;
   }
 }
 
 @media (max-width: 480px) {
   .contact100-form {
-    padding: 43px 15px 57px 15px;
+    padding: 43px 15px 37px 15px;
   }
 
   .label-input100 {
