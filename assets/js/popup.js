@@ -4,12 +4,12 @@ function PopUp(hideOrshow) {
 }
 
 window.document.ready = function () {
-    //console.log('window.localStorage;', window.localStorage);
     //console.log('localStorage.setVal', localStorage.setVal);
     
-    PopUp('hide');
+    // PopUp('hide');
+    // console.log('window.localStorage;', window);
     
-    if (localStorage.setVal == undefined) {
+    if (localStorage.hideRegisterDialog == undefined || localStorage.hideRegisterDialog == 'false') {
         PopUp('show');
     } else {
         PopUp('hide');
@@ -27,13 +27,12 @@ function onClose(){
 
 /* Post */
 function submitData() {
-    //console.log('submitData');
+    console.log('submit');
     var name = document.getElementById('name').value;
     var address = document.getElementById('address').value;
     var age = document.getElementById('age').value;
     var phone = document.getElementById('phone').value;
     var email = document.getElementById('email').value;
-
 
     if (name && address && age && phone && email) {
         axios.post('http://128.199.153.64:3500/api/Requests', {
@@ -45,21 +44,23 @@ function submitData() {
 
             })
             .then(function (response) {
-                //console.log('axios res', response);
+                console.log('axios res', response);
+                alert('Cảm ơn bạn đã đăng ký tham gia chương trình !');
+                PopUp('hide');
             })
             .catch(function (error) {
-                //console.log('axios err', error);
+                console.log('axios err', error);
             });
 
         if (typeof (Storage) !== "undefined") {
             // Store
-            localStorage.setItem("setVal", "true");
+            localStorage.setItem("hideRegisterDialog", "true");
         } else {
             //console.log('Browser not support');
         }
     } else {
         //console.log('Thiếu thông tin');
-        alert('Bạn nhập thiếu thông tin!');
+        alert('Bạn nhập thiếu thông tin !');
     }
 
 

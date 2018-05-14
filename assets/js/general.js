@@ -45,14 +45,14 @@ $(document).ready(function () {
     $(window).trigger('scroll');
 
 
-    $.post('/Auth/IsAuthenticated', function (data, status) {
-        if (data.IsAuthenticated)
-            $('.login.logged').show();
-        else {
-            $('.login.logged').remove();
-            $('.login').show();
-        }
-    });
+    // $.post('/Auth/IsAuthenticated', function (data, status) {
+    //     if (data.IsAuthenticated)
+    //         $('.login.logged').show();
+    //     else {
+    //         $('.login.logged').remove();
+    //         $('.login').show();
+    //     }
+    // });
 
     $('#nav').navActive();
     $('#m-nav').navActive();
