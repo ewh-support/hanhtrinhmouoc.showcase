@@ -17,7 +17,9 @@ if ($(window).width() > 991) {
 }
 
 var prize = 1846;
-prize = $('.prize').offset().top - 400;
+if ($('.prize').length) {
+    prize = $('.prize').offset().top - 400;
+}
 $(window).scroll(function () {
     if ($(window).scrollTop() > prize) {
         $('.sec2-img4').addClass('show');
@@ -92,74 +94,3 @@ function check_if_in_view() {
 
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
-
-(function (angular) {
-    'use strict';
-    angular.module('app', [])
-        .controller('homeCtrl', function ($scope, $rootScope, $window, $http) {
-
-            //$('.list-blog-body button').click(function () {
-            //    $('.list-blog-element').addClass('fadeInRight animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-            //        $(this).removeClass('fadeInRight animated');
-            //    });
-            //});
-
-            $scope.latestBlogList = [];
-            $scope.onPrev = true;
-            $scope.onNext = true;
-
-            var page = 1;
-            var ltr = true;
-            var mobile = false;
-
-            var loadPage = function () {
-                $scope.onPrev = true;
-                $scope.onNext = true;
-
-                $http.post('/post/LatestPost', {
-                    page: page
-                }).then(function onSuccess(response) {
-                    mobile = $(window).width() < 992;
-
-                    if (mobile) {
-                        $scope.latestBlogList = $scope.latestBlogList.concat(response.data.items);
-                    } else {
-                        $scope.latestBlogList = response.data.items;
-
-                        var $class = ltr ? 'fadeInRight animated' : 'fadeInLeft animated';
-                        $('.list-blog-element').addClass($class).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-                            $(this).removeClass($class);
-                        });
-                    }
-
-                    setTimeout(function () {
-                        FB.XFBML.parse(document);
-                    }, 500);
-                    $scope.onPrev = response.data.prev;
-                    $scope.onNext = response.data.next;
-
-                });
-            };
-            loadPage();
-
-            $scope.onprev = function () {
-                ltr = false;
-                page--;
-                loadPage();
-            }
-            $scope.onnext = function () {
-                ltr = true;
-                page++;
-                loadPage();
-            }
-
-            $(window).resize(function () {
-                var m = $(window).width() < 992;
-                if (mobile !== m) {
-                    page = 1;
-                    $scope.latestBlogList = [];
-                    loadPage();
-                }
-            });
-        });
-})(angular);
