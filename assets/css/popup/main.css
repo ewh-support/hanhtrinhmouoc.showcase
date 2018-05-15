@@ -1,380 +1,220 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ FONT ]*/
-
-@font-face {
-  font-family: Ubuntu-Bold;
-  src: url('../fonts/ubuntu/Ubuntu-Bold.ttf'); 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-
-
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
-
-* {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
-}
-
-body, html {
-	height: 100%;
-	font-family: Ubuntu-Bold, sans-serif;
-}
-
-/*---------------------------------------------*/
-a {
-	font-family: Ubuntu-Bold;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
-a:focus {
-	outline: none !important;
-}
-
-a:hover {
-	text-decoration: none;
-}
-
-/*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
-}
-
-p {
-	font-family: Ubuntu-Bold;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-}
-
-ul, li {
-	margin: 0px;
-	list-style-type: none;
-}
-
-
-/*---------------------------------------------*/
-input {
-	outline: none;
-	border: none;
-}
-
-input[type="number"] {
-    -moz-appearance: textfield;
-    appearance: none;
-    -webkit-appearance: none;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
-textarea {
-  outline: none;
-  border: none;
-}
-
-textarea:focus, input:focus {
-  border-color: transparent !important;
-}
-
-input::-webkit-input-placeholder { color: #bdbdd3;}
-input:-moz-placeholder { color: #bdbdd3;}
-input::-moz-placeholder { color: #bdbdd3;}
-input:-ms-input-placeholder { color: #bdbdd3;}
-
-textarea::-webkit-input-placeholder { color: #bdbdd3;}
-textarea:-moz-placeholder { color: #bdbdd3;}
-textarea::-moz-placeholder { color: #bdbdd3;}
-textarea:-ms-input-placeholder { color: #bdbdd3;}
-
-/*---------------------------------------------*/
-button {
-	outline: none !important;
-	border: none;
-	background: transparent;
-}
-
-button:hover {
-	cursor: pointer;
-}
-
-iframe {
-	border: none !important;
-}
-
-
-/*---------------------------------------------*/
-.container {
-	max-width: 1200px;
-}
-
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ Contact ]*/
-
-.container-contact100 {
-  width: 100%;  
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  position: relative;
-  background-color: #f2f2f2;
-}
-
-.wrap-contact100 {
-  width: 550px;
-  background: transparent;
-  padding: 50px 0px 160px 0px;
-}
-
-
-/*==================================================================
-[ Form ]*/
-
-.contact100-form {
-  width: 100%;
-}
-
-.contact100-form-title {
-  display: block;
-  font-family: Ubuntu-Bold;
-  font-size: 30px;
-  color: #403866;
-  line-height: 1.2;
-  text-transform: uppercase;
-  text-align: center;
-  padding-bottom: 49px;
-}
-
-/*------------------------------------------------------------------
-[ Input ]*/
-
-.wrap-input100 {
-  width: 100%;
-  background-color: #fff;
-  border-radius: 31px;
-  margin-bottom: 16px;
-  position: relative;
-  z-index: 1;
-}
-
-.input100 {
-  position: relative;
-  display: block;
-  width: 100%;
-  background: #fff;
-  border-radius: 31px;
-  font-family: Ubuntu-Bold;
+.despopup {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 1);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(137, 213, 213, 1) 100%);
   font-size: 18px;
-  color: #8f8fa1;
-  line-height: 1.2;
+
+  padding: 25px 65px;
+  box-sizing: border-box;
+
+  font-family: sans-serif;
+    position: relative;
+  color : #221E20;
+  color : rgb(34, 30, 32);
+}
+.despopup *{
+    box-sizing: border-box;
 }
 
-
-/*---------------------------------------------*/
-input.input100 {
-  height: 62px;
-  padding: 0 35px 0 35px;
+.despopup-logo {
+    margin-bottom: 5px;
 }
 
-
-textarea.input100 {
-  min-height: 169px;
-  padding: 19px 35px 0 35px;
+.despopup-title {
+    margin-bottom: 10px;
 }
 
-/*------------------------------------------------------------------
-[ Focus Input ]*/
+.despopup-form {}
 
-.focus-input100 {
+.despopup-img {
+  max-width: 100%;
+  margin: 0 auto;
   display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border-radius: 31px;
-  background-color: #fff;
-  pointer-events: none;
-  
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
 }
 
-.input100:focus + .focus-input100 {
-  width: calc(100% + 20px);
-}
-
-/*------------------------------------------------------------------
-[ Button ]*/
-.container-contact100-form-btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 10px;
-}
-
-.contact100-form-btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  min-width: 150px;
-  height: 62px;
-  background-color: transparent;
-  border-radius: 31px;
-
-  font-family: Ubuntu-Bold;
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.2;
-  text-transform: uppercase;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-  position: relative;
-  z-index: 1;
-}
-
-.contact100-form-btn::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  border-radius: 31px;
-  background-color: #827ffe;
-  pointer-events: none;
-  
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.contact100-form-btn:hover:before {
-  background-color: #403866;
-  width: calc(100% + 20px);
+.despopup-form-label {
+    margin-bottom: 10px;
+    margin-top: 15px;
+    line-height: 1.3
 }
 
 
+.despopup-form-input  {
+    width: 100%;
+    padding: 6px 20px;
+    margin: 6px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    background: #F9F7F6;
+    background: rgba(249, 247, 246, 1);
+    border-style: Solid;
+    border-color: #EC1C24;
+    border-color: rgba(236, 28, 36, 1);
+    border-width: 1px;
+    font-size: 16px;
+    text-align: center;
 
+}
+.despopup-form-submit{
+    text-align: center;
+    margin-top: 10px;
 
-/*------------------------------------------------------------------
-[ Alert validate ]*/
-
-.validate-input {
-  position: relative;
 }
 
-.alert-validate::before {
-  content: attr(data-validate);
-  position: absolute;
-  z-index: 1000;
-  max-width: 70%;
-  background-color: #fff;
-  border: 1px solid #c80000;
-  border-radius: 14px;
-  padding: 4px 25px 4px 10px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 10px;
-  pointer-events: none;
-
-  font-family: Ubuntu-Bold;
-  color: #c80000;
-  font-size: 13px;
-  line-height: 1.4;
-  text-align: left;
-
-  visibility: hidden;
-  opacity: 0;
-
-  -webkit-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  transition: opacity 0.4s;
+.despopup-form-submit button {
+  background: #EC1E24;
+  background: rgba(236, 30, 36, 1);
+  border-radius: 11px;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  display: inline-block;
+  outline: none;
+  padding: 6px 40px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.alert-validate::after {
-  content: "\f06a";
-  font-family: FontAwesome;
-  display: block;
-  position: absolute;
-  z-index: 1100;
-  color: #c80000;
-  font-size: 16px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 16px;
+.despopup-form-submit .button {
+  background: #EC1E24;
+  background: rgba(236, 30, 36, 1);
+  border-radius: 11px;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
+  display: inline-block;
+  outline: none;
+  padding: 6px 40px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.alert-validate:hover:before {
-  visibility: visible;
-  opacity: 1;
+
+.despopup-note{
+    font-size : 13px;
+    color : #231F20;
+    color : rgb(35, 31, 32);
+    line-height: 19px;
+    text-align: center;
+    margin-top: 20px;
 }
 
-@media (max-width: 992px) {
-  .alert-validate::before {
-    visibility: visible;
-    opacity: 1;
-  }
+.despopup-result{
+    text-align: center;
+}
+
+.despopup-result .title{
+    font-size : 35px;
+    color : #015488;
+    color : rgb(1, 84, 136);
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.despopup-result .sub{
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+.despopup-result .num{
+    font-size : 52px;
+    font-weight: bold;
+    color : #EC1E24;
+    color : rgb(236, 30, 36);
+    margin-bottom: 50px;
+}
+
+.despopup-close a{
+    display: block;
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    padding: 20px;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+
+}
+
+
+@media (max-width: 576px) {
+    
+    .despopup{
+        padding: 20px 10px;
+        font-size: 14px;
+    }
+
+    .despopup-close a{
+        font-size: 20px;
+    }
+
+    .despopup-result .title{
+        font-size : 25px;
+    
+    }
+    
+    .despopup-result .sub{
+        font-size: 20px;
+        line-height: 30px;
+     
+    }
+    
+    .despopup-result .num{
+        font-size : 40px;
+     
+    }
 }

@@ -17,7 +17,8 @@ if ($(window).width() > 991) {
 }
 
 var prize = 1846;
-prize = $('.prize').offset().top - 400;
+if($('.prize').length)
+{prize = $('.prize').offset().top - 400;}
 $(window).scroll(function () {
     if ($(window).scrollTop() > prize) {
         $('.sec2-img4').addClass('show');
