@@ -7,10 +7,10 @@ function PopUp(hideOrshow) {
 }
 
 // window.document.ready = function () {
-$("document").ready(function(){
+$("document").ready(function () {
     // setTimeout(function () {
     //console.log('window.localStorage;', window.localStorage);
-
+    // PopUp('show');
     if (localStorage.hideRegisterDialog == undefined || localStorage.hideRegisterDialog == 'false') {
         PopUp('show');
     } else {
@@ -20,8 +20,11 @@ $("document").ready(function(){
     // PopUpAlert('show');
 
     // }, 0);
-
-});
+    // axios.get('http://hanhtrinhmouoc.thanhnien.vn/tinrss?page=1&type=1')
+    //     .then(response => {
+    //         console.log('res', response);
+    //     });
+})
 
 /* onClose */
 function onClose() {
@@ -38,8 +41,11 @@ function submitData() {
     var email = document.getElementById('email').value;
 
     var id = 0;
+    var from = 'anhtuan6294@gmail.com';
+    var subject = 'Xác nhận tham gia rút thăm trúng thưởng';
+
     if (name && phone && email) {
-        axios.post('http://128.199.153.64:3500/api/Requests', {
+        axios.post('http://localhost:3500/api/Requests', {
             name: name,
             phone: phone,
             email: email
@@ -48,12 +54,25 @@ function submitData() {
             this._data.push(response.data);
             PopUp('hide');
             PopUpAlert('show');
-            // console.log('res axios post', response.data);
-            // console.log(response.data["id"] + 25000);
-            // console.log(response.data["name"]);
+            console.log('axios POST', response.data);
+            return getRes = response.data;
+        }).then(getRes => {
+            // console.log('getRes', getRes)
+            // let code = getRes.id + 25000;
+            // let name = getRes.name;
 
+            // axios.post('http://localhost:3500/api/Containers/sendEmail', {
+            //     to: getRes.email,
+            //     subject: "Xác nhận tham gia rút thăm trúng thưởng",
+            //     _code: code.toString(),
+            //     _name: name
+            // }).then(res => {
+            //     console.log('mail res', res);
+            // }).catch(err => {
+            //     console.log('mail err', err);
+            // })
         }).catch(function (error) {
-            //console.log('axios err', error);
+            console.log('axios err', error);
         });
 
         if (typeof (Storage) !== "undefined") {
@@ -75,7 +94,7 @@ function PopUpAlert(hideOrshow) {
     else {
         document.getElementById('popup-alert').removeAttribute('style');
         $("#name-result").text(this._data[0]["name"]);
-        $("#code-result").text(this._data[0]["id"]+25000);
+        $("#code-result").text(this._data[0]["id"] + 25000);
     }
 
 }

@@ -1,4 +1,3 @@
-
 (function ($) {
     "use strict";
 
@@ -19,7 +18,8 @@
     [ Validate ]*/
     var input = $('.validate-input .despopup-form-input');
 
-    $('.validate-form').on('submit',function(){
+    $('.validate-form').on('#submit-button',function(){
+        console.log('submit-button on click')
         var check = true;
 
         for(var i=0; i<input.length; i++) {
