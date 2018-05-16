@@ -1,5 +1,5 @@
 .rules-content {
-    background: url('../img/rules/rules-bg.jpg') no-repeat 0 120px;
+    background: url('../img/rules/term-1.jpg') no-repeat 0 120px;
     background-size: 100% auto;
     background-attachment: fixed;
     position: relative;
@@ -135,7 +135,7 @@
         margin-right: 50px;
     }
     .rules-element .tt-06 span {
-        width: 307px;
+        width: 200px;
     }
     .rules-element .list-text {
         padding-left: 50px;

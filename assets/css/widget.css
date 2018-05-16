@@ -49,7 +49,7 @@ body {
 @media screen and (min-width: 992px) {
 
     .body-content {
-        padding-right: 175px;
+        padding-right: 5px;
     }
 
     .widget {
