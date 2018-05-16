@@ -58,19 +58,20 @@ function submitData() {
             return getRes = response.data;
         }).then(getRes => {
             // console.log('getRes', getRes)
-            // let code = getRes.id + 25000;
-            // let name = getRes.name;
-
-            // axios.post('http://localhost:3500/api/Containers/sendEmail', {
-            //     to: getRes.email,
-            //     subject: "Xác nhận tham gia rút thăm trúng thưởng",
-            //     _code: code.toString(),
-            //     _name: name
-            // }).then(res => {
-            //     console.log('mail res', res);
-            // }).catch(err => {
-            //     console.log('mail err', err);
-            // })
+            let code = getRes.id + 25000;
+            let name = getRes.name;
+            let from = 'hanhtrinhmouoc@dulichhoanmy.com';
+            axios.post('http://128.199.153.64:3500/api/Containers/sendEmail', {
+                to: getRes.email,
+                from: from,
+                subject: "Xác nhận tham gia rút thăm trúng thưởng",
+                _code: code.toString(),
+                _name: name
+            }).then(res => {
+                console.log('mail res', res);
+            }).catch(err => {
+                console.log('mail err', err);
+            })
         }).catch(function (error) {
             console.log('axios err', error);
         });
