@@ -52,7 +52,7 @@ function submitData() {
     var subject = 'Xác nhận tham gia rút thăm trúng thưởng';
 
     if (name && phone && email) {
-        axios.post('http://localhost:3500/api/Requests', {
+        axios.post('http://128.199.153.64:3500/api/Requests', {
             name: name,
             phone: phone,
             email: email
@@ -77,7 +77,7 @@ function submitData() {
             }).then(res => {
                 //console.log('mail res', res);
             }).catch(err => {
-                //console.log('mail err', err);
+                // console.log('mail err', err);
             })
         }).catch(function (error) {
             //console.log('axios err', error);
