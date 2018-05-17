@@ -164,7 +164,7 @@ li p.checkmark::before {
 
 @media screen and (max-width: 992px) {
     .rules-content {
-        background: url('../img/rules/rules-bg-top-sp.png') no-repeat 0 0, url('../img/rules/rules-bg-bottom-sp.png') no-repeat 0 bottom;
+        background: url('../img/rules/term-1.jpg') no-repeat 0 0, url('../img/rules/term-1.jpg') no-repeat 0 bottom;
         background-size: 100%, 100%;
         padding-bottom: 200px;
     }

@@ -1,8 +1,15 @@
 var _data = [];
 
 function PopUp(hideOrshow) {
-    if (hideOrshow == 'hide') document.getElementById('popup-register').style.display = "none";
-    else document.getElementById('popup-register').removeAttribute('style');
+    if (hideOrshow == 'hide') {
+        document.getElementById('popup-register').style.display = "none";
+        document.getElementById('myModal').style.display = "none";
+    }   
+        
+    else {
+        document.getElementById('popup-register').removeAttribute('style');
+        document.getElementById('myModal').removeAttribute('style');
+    }
 
 }
 
@@ -45,7 +52,7 @@ function submitData() {
     var subject = 'Xác nhận tham gia rút thăm trúng thưởng';
 
     if (name && phone && email) {
-        axios.post('http://128.199.153.64:3500/api/Requests', {
+        axios.post('http://localhost:3500/api/Requests', {
             name: name,
             phone: phone,
             email: email
@@ -90,10 +97,14 @@ function submitData() {
 
 function PopUpAlert(hideOrshow) {
     ////console.log('alert popup', this._data);
-    if (hideOrshow == 'hide')
+    if (hideOrshow == 'hide'){
         document.getElementById('popup-alert').style.display = "none";
+        document.getElementById('myModal').style.display = "none";
+    }
     else {
         document.getElementById('popup-alert').removeAttribute('style');
+        document.getElementById('myModal').removeAttribute('style');
+        
         $("#name-result").text(this._data[0]["name"]);
         $("#code-result").text(this._data[0]["id"] + 25000);
     }
