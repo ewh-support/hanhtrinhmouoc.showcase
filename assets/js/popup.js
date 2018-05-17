@@ -9,9 +9,9 @@ function PopUp(hideOrshow) {
 // window.document.ready = function () {
 $("document").ready(function () {
     // setTimeout(function () {
-    ////console.log('window.localStorage;', window.localStorage);
+    console.log('window.localStorage;', window.localStorage);
     // PopUp('show');
-    if (localStorage.hideRegisterDialog == undefined || localStorage.hideRegisterDialog == 'false') {
+    if (localStorage.hideRegisterDialog175 == undefined || localStorage.hideRegisterDialog175 == 'false') {
         PopUp('show');
     } else {
         PopUp('hide');
@@ -78,7 +78,7 @@ function submitData() {
 
         if (typeof (Storage) !== "undefined") {
             // Store
-            localStorage.setItem("hideRegisterDialog", "true");
+            localStorage.setItem("hideRegisterDialog175", "true");
         } else {
             ////console.log('Browser not support');
         }
