@@ -9,7 +9,7 @@ function PopUp(hideOrshow) {
 // window.document.ready = function () {
 $("document").ready(function () {
     // setTimeout(function () {
-    //console.log('window.localStorage;', window.localStorage);
+    ////console.log('window.localStorage;', window.localStorage);
     // PopUp('show');
     if (localStorage.hideRegisterDialog == undefined || localStorage.hideRegisterDialog == 'false') {
         PopUp('show');
@@ -22,7 +22,7 @@ $("document").ready(function () {
     // }, 0);
     // axios.get('http://hanhtrinhmouoc.thanhnien.vn/tinrss?page=1&type=1')
     //     .then(response => {
-    //         console.log('res', response);
+    ////         console.log('res', response);
     //     });
 })
 
@@ -35,7 +35,7 @@ function onClose() {
 
 /* Post */
 function submitData() {
-    console.log('submit');
+    //console.log('submit');
     var name = document.getElementById('name').value;
     var phone = document.getElementById('phone').value;
     var email = document.getElementById('email').value;
@@ -54,10 +54,10 @@ function submitData() {
             this._data.push(response.data);
             PopUp('hide');
             PopUpAlert('show');
-            console.log('axios POST', response.data);
+            //console.log('axios POST', response.data);
             return getRes = response.data;
         }).then(getRes => {
-            // console.log('getRes', getRes)
+            ////console.log('getRes', getRes)
             let code = getRes.id + 25000;
             let name = getRes.name;
             let from = 'hanhtrinhmouoc@dulichhoanmy.com';
@@ -68,28 +68,28 @@ function submitData() {
                 _code: code.toString(),
                 _name: name
             }).then(res => {
-                console.log('mail res', res);
+                //console.log('mail res', res);
             }).catch(err => {
-                console.log('mail err', err);
+                //console.log('mail err', err);
             })
         }).catch(function (error) {
-            console.log('axios err', error);
+            //console.log('axios err', error);
         });
 
         if (typeof (Storage) !== "undefined") {
             // Store
             localStorage.setItem("hideRegisterDialog", "true");
         } else {
-            //console.log('Browser not support');
+            ////console.log('Browser not support');
         }
     } else {
-        console.log('Thiếu thông tin');
+        //console.log('Thiếu thông tin');
         // alert('Bạn nhập thiếu thông tin !');
     }
 }
 
 function PopUpAlert(hideOrshow) {
-    //console.log('alert popup', this._data);
+    ////console.log('alert popup', this._data);
     if (hideOrshow == 'hide')
         document.getElementById('popup-alert').style.display = "none";
     else {
