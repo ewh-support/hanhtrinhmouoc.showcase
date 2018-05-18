@@ -3,66 +3,153 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 .despopup {
-  max-width: 600px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 1);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(137, 213, 213, 1) 100%);
-  font-size: 18px;
-
-  padding: 25px 65px;
-  box-sizing: border-box;
-
-  font-family: sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 1);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(137, 213, 213, 1) 100%);
+    font-size: 18px;
+    padding: 25px 65px;
+    box-sizing: border-box;
+    font-family: sans-serif;
     position: relative;
-  color : #221E20;
-  color : rgb(34, 30, 32);
+    color: #221E20;
+    color: rgb(34, 30, 32);
 }
-.despopup *{
+
+.despopup * {
     box-sizing: border-box;
 }
 
@@ -77,9 +164,9 @@ table {
 .despopup-form {}
 
 .despopup-img {
-  max-width: 100%;
-  margin: 0 auto;
-  display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
 }
 
 .despopup-form-label {
@@ -88,8 +175,7 @@ table {
     line-height: 1.3
 }
 
-
-.despopup-form-input  {
+.despopup-form-input {
     width: 100%;
     padding: 6px 20px;
     margin: 6px 0;
@@ -103,82 +189,80 @@ table {
     border-width: 1px;
     font-size: 16px;
     text-align: center;
-
 }
-.despopup-form-submit{
+
+.despopup-form-submit {
     text-align: center;
     margin-top: 10px;
-
 }
 
 .despopup-form-submit button {
-  background: #EC1E24;
-  background: rgba(236, 30, 36, 1);
-  border-radius: 11px;
-  -moz-border-radius: 11px;
-  -webkit-border-radius: 11px;
-  display: inline-block;
-  outline: none;
-  padding: 6px 40px;
-  border: none;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
+    background: #EC1E24;
+    background: rgba(236, 30, 36, 1);
+    border-radius: 11px;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    display: inline-block;
+    outline: none;
+    padding: 6px 40px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .despopup-form-submit .button {
-  background: #EC1E24;
-  background: rgba(236, 30, 36, 1);
-  border-radius: 11px;
-  -moz-border-radius: 11px;
-  -webkit-border-radius: 11px;
-  display: inline-block;
-  outline: none;
-  padding: 6px 40px;
-  border: none;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
+    background: #EC1E24;
+    background: rgba(236, 30, 36, 1);
+    border-radius: 11px;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;
+    display: inline-block;
+    outline: none;
+    padding: 6px 40px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-
-.despopup-note{
-    font-size : 13px;
-    color : #231F20;
-    color : rgb(35, 31, 32);
+.despopup-note {
+    font-size: 13px;
+    color: #231F20;
+    color: rgb(35, 31, 32);
     line-height: 19px;
     text-align: center;
     margin-top: 20px;
 }
 
-.despopup-result{
+.despopup-result {
     text-align: center;
 }
 
-.despopup-result .title{
-    font-size : 35px;
-    color : #015488;
-    color : rgb(1, 84, 136);
+.despopup-result .title {
+    font-size: 35px;
+    color: #015488;
+    color: rgb(1, 84, 136);
     font-weight: bold;
     margin-bottom: 20px;
     margin-top: 50px;
 }
 
-.despopup-result .sub{
+.despopup-result .sub {
     font-size: 30px;
     line-height: 50px;
     margin-bottom: 20px;
 }
 
-.despopup-result .num{
-    font-size : 52px;
+.despopup-result .num {
+    font-size: 52px;
     font-weight: bold;
-    color : #EC1E24;
-    color : rgb(236, 30, 36);
+    color: #EC1E24;
+    color: rgb(236, 30, 36);
     margin-bottom: 50px;
 }
 
-.despopup-close a{
+.despopup-close a {
     display: block;
     position: absolute;
     color: black;
@@ -187,34 +271,63 @@ table {
     right: 0;
     top: 0;
     text-decoration: none;
-
 }
 
-
 @media (max-width: 576px) {
-    
-    .despopup{
+    .despopup {
         padding: 20px 10px;
         font-size: 14px;
     }
-
-    .despopup-close a{
+    .despopup-close a {
         font-size: 20px;
     }
-
-    .despopup-result .title{
-        font-size : 25px;
-    
+    .despopup-result .title {
+        font-size: 25px;
     }
-    
-    .despopup-result .sub{
+    .despopup-result .sub {
         font-size: 20px;
         line-height: 30px;
-     
     }
-    
-    .despopup-result .num{
-        font-size : 40px;
-     
+    .despopup-result .num {
+        font-size: 40px;
     }
+}
+
+.modal {
+    /*display: none;*/
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 9999;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 0px;
+    border: 1px solid #888;
+    width: 600px;
+    /* Could be more or less, depending on screen size */
+}
+
+@media (max-width: 576px) {
+    .modal-content {
+        width: 65%;
+    } 
 }
