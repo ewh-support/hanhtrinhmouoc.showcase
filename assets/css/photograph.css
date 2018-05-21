@@ -1,5 +1,35 @@
+
+.article-content h6 {
+    line-height: 1.2;
+    font-size: 30px;
+    margin: 30px 0;
+    font-family: 'Roboto Bold', sans-serif;
+    text-transform: uppercase;
+    color: #26AFD8;
+}
+
+.article-content em {
+    font-size: 24px;
+    font-family: 'Roboto Light', sans-serif;
+    font-style: italic;
+}
+
+.article-content p {
+    font-size: 26px;
+    font-family: 'Roboto Light', sans-serif;
+    line-height: 1.4;
+}
+
+.article-content .images img {
+    max-width: 100%;
+}
+
+.article-content figure.images {
+    margin: 0;
+}
+
 .photograph-content {
-    background: url('/assets/img/photograph/photograph-bg.png') no-repeat 0 0;
+    background: url('../img/photograph/photograph-bg.png') no-repeat 0 0;
     background-size: 100%;
 }
 .photograph-content .tt-01{
@@ -39,7 +69,7 @@
     display: none;
 }
 .photograph-content .photograph-element .list-element .element > .element:first-child{
-    height: 100%;
+    /*height: 100%;*/
 }
 .photograph-content .photograph-element .list-element .element img{
     height: 100%;
