@@ -37,6 +37,6 @@ span_bai_viet = document.getElementById("bai-viet");
 txt_bai_viet = document.createTextNode(count1);
 txt_bai_anh = document.createTextNode(count2);
 txt_bai_du_thi = document.createTextNode(total_count);
-span_bai_du_thi.appendChild(txt_bai_viet);
+span_bai_viet.appendChild(txt_bai_viet);
 span_bai_anh.appendChild(txt_bai_anh);
-span_bai_viet.appendChild(txt_bai_du_thi);
+span_bai_du_thi.appendChild(txt_bai_du_thi);
