@@ -1,4 +1,4 @@
-console.log('XML2Json');
+// console.log('XML2Json');
 
 function loadXMLDoc(dname) {
     if (window.XMLHttpRequest) {
@@ -21,8 +21,8 @@ var xmlDoc2 = loadXMLDoc("http://hanhtrinhmouoc.thanhnien.vn/tinrss?type=2"); //
 var x2js = new X2JS();
 var jsonObj1 = x2js.xml2json(xmlDoc1); // Convert XML to JSON
 var jsonObj2 = x2js.xml2json(xmlDoc2); // Convert XML to JSON
-console.log(jsonObj1.rss.channel.item);
-console.log(jsonObj2.rss.channel.item);
+// console.log(jsonObj1.rss.channel.item);
+// console.log(jsonObj2.rss.channel.item);
 //console.log(jsonObj1.rss.channel.totalrow);
 //console.log(jsonObj2.rss.channel.totalrow);
 count1 = jsonObj1.rss.channel.totalrow;
