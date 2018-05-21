@@ -22,6 +22,12 @@ rivets.formatters.date = function (value) {
     return moment(value).format('DD.MM.YYYY')
 }
 
+rivets.bind($('#bind-bai-anh-moi-nhat'), {
+    items: jsonObj1.rss.channel.item[0]
+})
+
+jsonObj1.rss.channel.item.shift();
+
 rivets.bind($('#bind-bai-anh'), {
     items: jsonObj1.rss.channel.item
 })
