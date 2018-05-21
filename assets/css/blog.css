@@ -11,6 +11,11 @@ body {
     text-transform: uppercase;
     color: #26AFD8;
 }
+.article-content em {
+    font-size: 24px;
+    font-family: 'Roboto Light', sans-serif;
+    font-style: italic;
+}
 .article-content p {
     font-size: 26px;
     font-family: 'Roboto Light', sans-serif;
@@ -18,6 +23,9 @@ body {
 }
 .article-content .images img {
     max-width: 100%;
+}
+.article-content figure.images{
+	margin: 0;
 }
 
 .list-blog {
@@ -57,6 +65,44 @@ body {
             transform: rotate(-2deg);
         }
 
+.control {
+    text-align: right;
+    margin-top: 0;
+    width: 100%;
+}
+
+    .control li {
+        display: inline-block;
+        margin-left: 3px;
+    }
+
+    .control .sp {
+        display: none;
+    }
+
+    .control button {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #0B7182;
+        background-color: transparent;
+        line-height: 0;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+
+    .control button.disabled {
+        opacity: 0.35;
+        cursor: auto;
+        pointer-events: none;
+    }
+.owl-nav.control{
+	padding-top: 20px;
+}
+.owl-nav.control button{
+	border: 1px solid #26AFD8;
+    background-color: #26AFD8;
+}
+
 footer.footer-blog {
     background: url('../img/blog/blog-footer-bg.png') no-repeat 0 0;
     background-size: 100%;
@@ -76,6 +122,13 @@ footer.footer-blog {
 .footer-blog-detail {
     background: url('../img/photograph/photograph-detail-footer.png') no-repeat 0 0 !important;
     background-size: 100%;
+}
+
+.list-related {
+    background: #fff;
+    border: 1px solid #D6EDF9;
+    padding: 25px;
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 1600px) {
@@ -131,6 +184,13 @@ footer.footer-blog {
     .blog-element .sp {
         display: block;
     }
+	.body-detail-content .list-blog-element .bg-white h4.tt{
+		margin-bottom: 10px;
+	}
+	.body-detail-content .list-blog-element .bg-white h4.tt a{
+		color: #565656;
+	}
+
 
     .pc {
         display: none;
@@ -138,6 +198,10 @@ footer.footer-blog {
     /* Blog */
     .list-blog {
         padding: 0;
+    }
+
+    .list-related .list-element {
+        padding: 15px;
     }
     /* Blog Detail */
     .body-detail-content {
@@ -207,6 +271,18 @@ footer.footer-blog {
 }
 
 @media screen and (max-width: 768px) {
+	.box-detail .author{
+		width: 100%;
+	}
+    .article-content h6 {
+        font-size: 24px;
+    }
+	.article-content p{
+		font-size: 18px;
+	}
+	.article-content em{
+		font-size: 17px;
+	}
     /* Blog Title */
     .blog-body .tt-01,
     .blog-detail-body .tt-01 {
