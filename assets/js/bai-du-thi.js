@@ -18,6 +18,10 @@ rivets.binders.src = function (el, value) {
     el.src = value;
 };
 
+rivets.binders.href = function (el, value) {
+    el.href = '/bai-chi-tiet/?id=' + value
+}
+
 rivets.formatters.date = function (value) {
     return moment(value).format('DD.MM.YYYY')
 }
