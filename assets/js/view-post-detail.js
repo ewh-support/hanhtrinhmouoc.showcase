@@ -20,11 +20,20 @@ getUrl().then(res => {
     });
     return data;
 }).then(res => {
-    console.log('data', res.data);
+    
+    //find img-src and add url before binding 
+    var find = '<img src="';
+    var re = new RegExp(find, 'g');
+    res.data.BodyContent = res.data.BodyContent.replace(re, '<img src="http://hanhtrinhmouoc.thanhnien.vn');
 
+    //rivet
     rivets.bind($('#rv-binding'), {
         items: res.data
     })
 }).catch(err => {
     console.log(err);
 })
+
+rivets.formatters.date = function (value) {
+    return moment(value).format('DD.MM.YYYY')
+}
