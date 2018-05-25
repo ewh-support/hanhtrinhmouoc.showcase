@@ -18,7 +18,7 @@ getUrl().then(res => {
     });
     return data;
 }).then(res => {
-    
+    console.log(res.data);    
     //find img-src and add url before binding 
     var find = '<img src="';
     var re = new RegExp(find, 'g');
