@@ -27,11 +27,22 @@ getUrl().then(res => {
     //rivet
     rivets.bind($('#rv-binding'), {
         items: res.data
-    })
+    });
+    // console.log('items', res.data);
+    // console.log('items1', res.data.Url);
+
+    document.getElementById("fb-like-1").setAttribute("data-href", res.data.Url);
+    document.getElementById("fb-like-2").setAttribute("data-href", res.data.Url);
+
 }).catch(err => {
     console.log(err);
-})
+}) 
+
+rivets.binders['data-href'] = function (el, value) {
+    el.href = value;
+}; 
 
 rivets.formatters.date = function (value) {
     return moment(value).format('DD.MM.YYYY')
 }
+
