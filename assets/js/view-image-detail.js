@@ -27,7 +27,10 @@ getUrl().then(res => {
     //rivet
     rivets.bind($('#rv-binding'), {
         items: res.data
-    })
+    }) 
+    console.log(res.data);
+    document.getElementById("fb-like-1").setAttribute("data-href", res.data.Url);
+    document.getElementById("fb-like-2").setAttribute("data-href", res.data.Url);
 }).catch(err => {
     console.log(err);
 })
