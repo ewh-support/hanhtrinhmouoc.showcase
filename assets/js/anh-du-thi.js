@@ -33,7 +33,7 @@ var row3Col2 = [];
 for (let i = 1; i <= 2; i++) {
     row1Col2.push(jsonObj1.rss.channel.item[i]);
 }
-console.log(row1Col2);
+//console.log(row1Col2);
 for (let i = 4; i <= 5; i++) {
     row2Col1.push(jsonObj1.rss.channel.item[i]);
 }

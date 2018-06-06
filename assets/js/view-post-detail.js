@@ -35,7 +35,7 @@ getUrl().then(res => {
     document.getElementById("fb-like-2").setAttribute("data-href", res.data.Url);
 
 }).catch(err => {
-    console.log(err);
+    //console.log(err);
 }) 
 
 rivets.binders['data-href'] = function (el, value) {
