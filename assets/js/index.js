@@ -23,7 +23,7 @@ rivets.binders.src = function (el, value) {
 };
 
 rivets.binders.href = function (el, value) {
-    el.href = value;
+    el.href = '/anh-chi-tiet/?id=' + value;
 }
 
 rivets.formatters.date = function (value) {
