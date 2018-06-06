@@ -68,6 +68,7 @@ p.vote-count.count.num-of-likes {
     margin-top: 18px;
     line-height: 0;
 }
+
 .fb-like {
     float: right;
 }
@@ -80,6 +81,7 @@ p.vote-count.count.num-of-likes {
     font-size: 0;
     margin: 0 3px;
 }
+
 .nav-next {
     transform: rotate(180deg);
 }
@@ -1124,7 +1126,7 @@ header .menu-sp {
     }
 
         .tt-06 img {
-            width: 180px;
+            width: 250px;
         }
 }
 
@@ -1134,7 +1136,7 @@ header .menu-sp {
     }
 
         .tt-06 img {
-            width: 180px;
+            width: 250px;
         }
 }
 
@@ -1456,7 +1458,7 @@ header .menu-sp {
     position: relative;
     display: block;
     overflow: hidden;
-    line-height: 0;
+    /*line-height: 0;*/
 }
 
     .list-element .element .photo {
@@ -1478,8 +1480,14 @@ header .menu-sp {
         -webkit-transition: 0.3s;
     }
 
-    .list-element .element:hover > .info {
+    .list-element .element:hover > .info, .list-element .element:hover > div > .info {
         bottom: -4px;
+    }
+
+    .list-element .element .info > .fb_iframe_widget {
+        position: absolute;
+        right: 10px;
+        bottom: 40px;
     }
 
     .list-element .element .info h6 {
@@ -1489,6 +1497,7 @@ header .menu-sp {
         display: inline-block;
         text-transform: uppercase;
         vertical-align: top;
+        position: absolute;
     }
 
     .list-element .element .info .avatar img {
@@ -1509,7 +1518,9 @@ header .menu-sp {
         font-size: 14px;
         letter-spacing: 0.5px;
         margin-top: 5px;
-        margin-left: 5px;
+        position: absolute;
+        margin-left: 115px;
+        margin-right: 6px;
     }
 
         .list-element .element .info .name span {
@@ -1529,6 +1540,7 @@ header .menu-sp {
 
     .list-element .element .info .author {
         float: left;
+        width: 95%;
     }
 
     .list-element .element .info .list-function {
@@ -1623,50 +1635,53 @@ header .menu-sp {
         position: relative;
     }
 
-    .list-blog-element .blog-element {
+    .list-blog-element .blog-element, .list-related .blog-element {
         margin-top: 25px;
     }
 
-        .list-blog-element .blog-element img {
+        .list-blog-element .blog-element img, .list-related .blog-element img {
             width: 100%;
         }
 
-        .list-blog-element .blog-element .name {
+        .list-blog-element .blog-element .name, .list-related .blog-element .name {
             margin: 20px 0;
         }
 
-            .list-blog-element .blog-element .name h6 {
+            .list-blog-element .blog-element .name h6, .list-related .blog-element .name h6 {
                 float: left;
                 font-weight: 400;
                 text-align: left;
+                width: 100%;
+                min-height: 85px;
             }
 
-                .list-blog-element .blog-element .name h6 span {
+                .list-blog-element .blog-element .name h6 span, .list-related .blog-element .name h6 span {
                     display: block;
                     font-family: 'Roboto Bold', sans-serif;
                 }
 
-                .list-blog-element .blog-element .name h6 .tt > a {
-                    font-size: 28px;
-                    text-transform: uppercase;
+                .list-blog-element .blog-element .name h6 .tt > a, .list-related .blog-element .name h6 .tt,
+                .list-related .blog-element .name h6 .tt a {
+                    font-size: 24px;
+                    /*text-transform: uppercase;*/
                     color: #26AEDA;
                 }
 
-                .list-blog-element .blog-element .name h6 .date {
+                .list-blog-element .blog-element .name h6 .date, .list-related .blog-element .name h6 .date {
                     color: #58585B;
                     font-size: 22px;
                     font-family: 'Roboto Regular', sans-serif;
                 }
 
-            .list-blog-element .blog-element .name .list-function {
+            .list-blog-element .blog-element .name .list-function, .list-related .blog-element .name .list-function {
                 float: right;
             }
 
-                .list-blog-element .blog-element .name .list-function img {
+                .list-blog-element .blog-element .name .list-function img, .list-related .blog-element .name .list-function img {
                     width: 35px;
                 }
 
-        .list-blog-element .blog-element p {
+        .list-blog-element .blog-element p, .list-related .blog-element p {
             text-align: left;
             font-family: 'Roboto Regular', sans-serif;
             font-size: 22px;
@@ -1675,22 +1690,33 @@ header .menu-sp {
             letter-spacing: -0.5px;
         }
 
-        .list-blog-element .blog-element .avatar {
+        .list-blog-element .blog-element .avatar, .list-related .blog-element .avatar {
             text-align: left;
+            clear: both;
         }
 
-            .list-blog-element .blog-element .avatar img {
+            .list-blog-element .blog-element .avatar img, .list-related .blog-element .avatar img {
                 width: 45px;
                 border-radius: 50%;
             }
 
-            .list-blog-element .blog-element .avatar span {
+            .list-blog-element .blog-element .avatar span, .list-related .blog-element .avatar span {
                 display: inline-block;
                 vertical-align: top;
                 text-transform: uppercase;
                 padding: 15px 10px;
                 color: #26AEDA;
             }
+
+.read-more {
+    float: right;
+    color: #0B7182;
+    font-style: italic;
+}
+
+    .read-more:hover {
+        text-decoration: underline;
+    }
 
 @media screen and (max-width: 992px) {
     /* Blog Element */
@@ -1710,12 +1736,17 @@ header .menu-sp {
 
         .list-blog-element h4.tt > a {
             color: #fff;
+            /*text-transform: uppercase;*/
+        }
+
+        .list-blog-element h4.tt {
+            color: #fff;
             font-size: 25px;
             font-family: 'Roboto Bold', sans-serif;
             margin: 0 0 15px;
         }
 
-        .list-blog-element .bg-white h4.tt {
+        .list-blog-element .bg-white h4.tt > a {
             color: #565656;
         }
 
@@ -1755,7 +1786,7 @@ header .menu-sp {
     }
 
         .list-blog-element .blog-element .avatar img {
-            width: 55px;
+            width: 45px;
         }
 
         .list-blog-element .blog-element .avatar span {
@@ -1764,7 +1795,7 @@ header .menu-sp {
 
         .list-blog-element .blog-element .avatar .date {
             position: absolute;
-            bottom: 8px;
+            bottom: 5px;
             right: 0;
             color: #fff;
             font-family: 'Roboto Light', sans-serif;
@@ -1790,6 +1821,7 @@ header .menu-sp {
 
         .list-blog-element .bg-white p {
             color: #565656;
+            margin-bottom: 5px;
         }
 
         .list-blog-element .bg-white .avatar {
@@ -1871,13 +1903,19 @@ header .menu-sp {
         display: none;
     }
 
-    .control li button {
+    .control button {
         width: 40px;
         height: 40px;
         border: 1px solid #0B7182;
         line-height: 0;
         padding: 5px;
         box-sizing: border-box;
+    }
+
+    .control li button:disabled {
+        opacity: 0.35;
+        cursor: auto;
+        pointer-events: none;
     }
 
 @media screen and (max-width: 992px) {
@@ -1898,7 +1936,12 @@ header .menu-sp {
             height: auto;
             border: 0 !important;
         }
+
+            .control li button:disabled {
+                display: none;
+            }
 }
+
 /* Popup */
 .popup {
     position: fixed;
@@ -2036,7 +2079,7 @@ header .menu-sp {
     }
 
     .box-content .images {
-        margin-top: 80px;
+        margin-top: 10px;
     }
 
         .box-content .images img {
@@ -2044,16 +2087,20 @@ header .menu-sp {
             height: auto !important;
         }
 
-        .box-content .images .tt-detail {
-            line-height: 1.2;
-            font-size: 30px;
-            margin: 30px 0;
-        }
+    .box-content figure.images p {
+        margin-top: 0;
+    }
 
-.list-related .list-element {
+    .box-content .images .tt-detail {
+        line-height: 1.2;
+        font-size: 30px;
+        margin: 30px 0;
+    }
+
+.list-related .list-element > .owl-stage-outer {
     background: #fff;
-    border: 1px solid #D6EDF9;
-    padding: 25px;
+    /*border: 1px solid #D6EDF9;
+    padding: 25px;*/
     box-sizing: border-box;
 }
 
@@ -2062,9 +2109,10 @@ header .menu-sp {
     margin-top: 0;
 }
 
-    .list-related .control button {
+    .list-related .control > button {
         background: #26AFD8;
         border: 1px solid #26AFD8;
+        margin-left: 6px;
     }
 
 @media screen and (max-width: 992px) {

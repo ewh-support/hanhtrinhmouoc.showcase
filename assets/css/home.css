@@ -862,6 +862,7 @@ body .video {
 
     .index-content .list-blog-element h4.tt {
         text-align: left;
+        margin-bottom: 10px;
     }
 
     .index-content .list-blog-body {
@@ -1033,6 +1034,7 @@ body .video {
 
     .sec2 .gr-btn {
         text-align: center !important;
+        padding-bottom: 20px;
     }
 
     .sec2 .btn {
@@ -1174,6 +1176,6 @@ body .video {
     }
 
     .list-element .element .info .name {
-        width: 95px;
+        width: 115px;
     }
 }
