@@ -134,3 +134,20 @@ rivets.bind($('#bind-newest-image-col2-row1'), {
 rivets.bind($('#bind-newest-image-col2-row2'), {
     items: list_6_newest_image[1]
 })
+
+//find 3 bài mới nhất
+var findThreeNewestBlog = jsonObj2.rss.channel.item.map(value => {
+    return value.numofshares;
+})
+
+var findIndicesBlog = findIndicesOfMax(findThreeNewestBlog, 3);
+//console.log(indices);
+
+var threeNewestBlog = [];
+for (const iterator of findIndicesBlog) {
+    threeNewestBlog.push(jsonObj2.rss.channel.item[iterator]);
+}
+
+rivets.bind($('#bind-newest-blog'), {
+    items: threeNewestBlog
+})
