@@ -29,3 +29,34 @@ rivets.formatters.date = function (value) {
 rivets.bind($('#bind-bai-viet'), {
     items: jsonObj1.rss.channel.item
 })
+
+//bind-newest-blog
+var findThreeNewestBlog = jsonObj1.rss.channel.item.map(value => {
+    return value.numofshares;
+})
+
+function findIndicesOfMax(inp, count) {
+    var outp = [];
+    for (var i = 0; i < inp.length; i++) {
+        outp.push(i);
+        if (outp.length > count) {
+            outp.sort(function (a, b) {
+                return inp[b] - inp[a];
+            });
+            outp.pop();
+        }
+    }
+    return outp;
+}
+
+var findIndicesBlog = findIndicesOfMax(findThreeNewestBlog, 3);
+//console.log(indices);
+
+var threeNewestBlog = [];
+for (const iterator of findIndicesBlog) {
+    threeNewestBlog.push(jsonObj1.rss.channel.item[iterator]);
+}
+
+rivets.bind($('#bind-newest-blog'), {
+    items: threeNewestBlog
+})

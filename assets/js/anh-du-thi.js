@@ -11,7 +11,7 @@ function loadXMLDoc(dname) {
 var xmlDoc1 = loadXMLDoc("http://hanhtrinhmouoc.thanhnien.vn/tinrss?type=2"); // XML
 var x2js = new X2JS();
 var jsonObj1 = x2js.xml2json(xmlDoc1); // Convert XML to JSON
-//console.log(jsonObj1.rss.channel.item);
+console.log(jsonObj1.rss.channel.item);
 
 /* Binding */
 rivets.binders.src = function (el, value) {
@@ -98,7 +98,7 @@ var imgCol2 = [];
 for (let i = 1; i <= 2; i++) {
     imgCol2.push(list_3_newest_image[i]);
 }
-console.log('img', imgCol2);
+
 
 rivets.bind($('#bind-newest-image-col1'), {
     items: list_3_newest_image[0]
@@ -106,3 +106,4 @@ rivets.bind($('#bind-newest-image-col1'), {
 rivets.bind($('#bind-newest-image-col2'), {
     items: imgCol2
 })
+
