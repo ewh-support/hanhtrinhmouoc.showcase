@@ -64,3 +64,45 @@ rivets.bind($('#bind-row3-col1'), {
 rivets.bind($('#bind-row3-col2'), {
     items: row3Col2
 })
+
+//get 3 image top shares
+var scoreByPattern = jsonObj1.rss.channel.item.map(value => {
+    return value.numofshares;
+})
+
+function findIndicesOfMax(inp, count) {
+    var outp = [];
+    for (var i = 0; i < inp.length; i++) {
+        outp.push(i);
+        if (outp.length > count) {
+            outp.sort(function (a, b) {
+                return inp[b] - inp[a];
+            });
+            outp.pop();
+        }
+    }
+    return outp;
+}
+
+//console.log(scoreByPattern);
+
+var indices = findIndicesOfMax(scoreByPattern, 3);
+//console.log(indices);
+
+var list_3_newest_image = [];
+for (const iterator of indices) {
+    list_3_newest_image.push(jsonObj1.rss.channel.item[iterator]);
+}
+
+var imgCol2 = [];
+for (let i = 1; i <= 2; i++) {
+    imgCol2.push(list_3_newest_image[i]);
+}
+console.log('img', imgCol2);
+
+rivets.bind($('#bind-newest-image-col1'), {
+    items: list_3_newest_image[0]
+})
+rivets.bind($('#bind-newest-image-col2'), {
+    items: imgCol2
+})
