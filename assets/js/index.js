@@ -64,9 +64,9 @@ for (let i = 0; i < 6; i++) {
     newest_blog.push(jsonObj2.rss.channel.item[i]);
 }
 
-rivets.bind($('#bind-bai-viet'), {
-    items: newest_blog
-})
+// rivets.bind($('#bind-bai-viet'), {
+//     items: newest_blog
+// })
 
 rivets.binders.src = function (el, value) {
     el.src = value;
@@ -79,6 +79,58 @@ rivets.binders.href = function (el, value) {
 rivets.formatters.date = function (value) {
     return moment(value).format('DD.MM.YYYY')
 }
+
+var items_bai = newest_blog;
+controller_bai = {
+    prevPage: function (e, model) {
+        var numPages = Math.ceil(model.data.length / model.limit);
+        // console.log('numPages', numPages);
+        // console.log('model.current_page', model.current_page);
+        // console.log('model.data', model.data);
+        // console.log('model.item', model.items);
+        model.items = [];
+        if (model.current_page > 1) {
+            model.current_page--;
+            
+            //change page
+            if (model.current_page < 1) model.current_page = 1;
+            if (model.current_page > numPages) model.current_page = numPages;
+            for (var i = (model.current_page - 1) * model.limit; i < (model.current_page * model.limit) && i < model.data.length; i++){
+                model.items.push(model.data[i]);
+                
+            }
+        }
+    },
+
+    nextPage: function (e, model) {
+        var numPages = Math.ceil(model.data.length / model.limit);
+        // console.log('numPages', numPages);
+        // console.log('model.current_page', model.current_page);
+        // console.log('model.data', model.data);
+        // console.log('model.item', model.items);
+        model.items = [];
+        if (model.current_page < numPages) {
+            model.current_page++;
+            //change page
+            if (model.current_page < 1) model.current_page = 1;
+            if (model.current_page > numPages) model.current_page = numPages;
+            for (var i = (model.current_page - 1) * model.limit; i < (model.current_page * model.limit) && i < model.data.length; i++){
+                model.items.push(model.data[i]);
+                
+            }
+        }
+      
+    }
+}
+
+rivets.bind(document.querySelector('#bind-bai-viet'), {
+    items: items_bai,
+    data: jsonObj1.rss.channel.item,
+    current_page: 1,
+    limit: 6,
+    controller: controller_bai
+});
+
 
 //find 6 ảnh mới nhất
 var scoreByPattern = jsonObj1.rss.channel.item.map(value => {
@@ -115,7 +167,7 @@ var imgCol1Row2 = [];
 for (let i = 2; i <= 3; i++) {
     imgCol1Row2.push(list_6_newest_image[i]);
 }
-
+ 
 var imgCol2Row1 = [];
 for (let i = 4; i <= 5; i++) {
     imgCol2Row1.push(list_6_newest_image[i]);
@@ -140,7 +192,7 @@ var findThreeNewestBlog = jsonObj2.rss.channel.item.map(value => {
     return value.numofshares;
 })
 
-var findIndicesBlog = findIndicesOfMax(findThreeNewestBlog, 3);
+var findIndicesBlog = findIndicesOfMax(findThreeNewestBlog, 15);
 //console.log(indices);
 
 var threeNewestBlog = [];
@@ -148,6 +200,57 @@ for (const iterator of findIndicesBlog) {
     threeNewestBlog.push(jsonObj2.rss.channel.item[iterator]);
 }
 
-rivets.bind($('#bind-newest-blog'), {
-    items: threeNewestBlog
-})
+// rivets.bind($('#bind-newest-blog'), {
+//     items: threeNewestBlog
+// }) 
+
+var items_blog_most_shares = threeNewestBlog.slice(0,3);
+controller_blog_most_shares = {
+    prevPage: function (e, model) {
+        var numPages = Math.ceil(model.data.length / model.limit);
+        // console.log('numPages', numPages);
+        // console.log('model.current_page', model.current_page);
+        // console.log('model.data', model.data);
+        // console.log('model.item', model.items);
+        model.items = [];
+        if (model.current_page > 1) {
+            model.current_page--;
+            
+            //change page
+            if (model.current_page < 1) model.current_page = 1;
+            if (model.current_page > numPages) model.current_page = numPages;
+            for (var i = (model.current_page - 1) * model.limit; i < (model.current_page * model.limit) && i < model.data.length; i++){
+                model.items.push(model.data[i]);
+                
+            }
+        }
+    },
+
+    nextPage: function (e, model) {
+        var numPages = Math.ceil(model.data.length / model.limit);
+        // console.log('numPages', numPages);
+        // console.log('model.current_page', model.current_page);
+        // console.log('model.data', model.data);
+        // console.log('model.item', model.items);
+        model.items = [];
+        if (model.current_page < numPages) {
+            model.current_page++;
+            //change page
+            if (model.current_page < 1) model.current_page = 1;
+            if (model.current_page > numPages) model.current_page = numPages;
+            for (var i = (model.current_page - 1) * model.limit; i < (model.current_page * model.limit) && i < model.data.length; i++){
+                model.items.push(model.data[i]);
+                
+            }
+        }
+      
+    }
+}
+
+rivets.bind(document.querySelector('#bind-newest-blog'), {
+    items: items_blog_most_shares,
+    data: threeNewestBlog,
+    current_page: 1,
+    limit: 3,
+    controller: controller_blog_most_shares
+});

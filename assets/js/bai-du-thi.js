@@ -32,7 +32,6 @@ rivets.formatters.date = function (value) {
 var items_bai_viet = jsonObj1.rss.channel.item.slice(0,6);
 console.log('items_bai_viet',items_bai_viet);
 events = {
-    
     prevPage: function (e, model) {
         var numPages = Math.ceil(model.data.length / model.limit);
         // console.log('numPages', numPages);
@@ -103,7 +102,7 @@ function findIndicesOfMax(inp, count) {
     return outp;
 }
 
-var findIndicesBlog = findIndicesOfMax(findThreeNewestBlog, 12);
+var findIndicesBlog = findIndicesOfMax(findThreeNewestBlog, 15);
 //console.log(indices);
 
 var threeNewestBlog = [];
