@@ -1,14 +1,14 @@
 var _data = [];
 
 function PopUp(hideOrshow) {
-    if (hideOrshow == 'hide') {
+    if (hideOrshow === 'hide') {
         document.getElementById('popup-register').style.display = "none";
         document.getElementById('myModal').style.display = "none";
-    }   
-        
-    else {
-        document.getElementById('popup-register').removeAttribute('style');
-        document.getElementById('myModal').removeAttribute('style');
+    }
+
+    if (hideOrshow == 'show') {
+        document.getElementById('popup-register').style.display = "block";
+        document.getElementById('myModal').style.display = "block";
     }
 
 }
@@ -17,8 +17,10 @@ function PopUp(hideOrshow) {
 $("document").ready(function () {
     // setTimeout(function () {
     // console.log('window.localStorage;', window.localStorage);
-    // PopUp('show');
-    if (localStorage.hideRegisterDialog175 == undefined || localStorage.hideRegisterDialog175 == 'false') {
+    //PopUp('show');
+    console.log('localStorage', localStorage);
+    console.log('localStorage.hideRegisterDialog175', localStorage.hideRegisterDialog175);
+    if (localStorage.hideRegisterDialog175 === undefined || localStorage.hideRegisterDialog175 === 'false') {
         PopUp('show');
     } else {
         PopUp('hide');
@@ -50,7 +52,7 @@ function submitData() {
     var id = 0;
     var from = 'anhtuan6294@gmail.com';
     var subject = 'Xác nhận tham gia rút thăm trúng thưởng';
-
+  
     if (name && phone && email) {
         axios.post('http://128.199.153.64:3500/api/Requests', {
             name: name,
@@ -97,14 +99,13 @@ function submitData() {
 
 function PopUpAlert(hideOrshow) {
     ////console.log('alert popup', this._data);
-    if (hideOrshow == 'hide'){
+    if (hideOrshow == 'hide') {
         document.getElementById('popup-alert').style.display = "none";
         document.getElementById('myModal').style.display = "none";
-    }
-    else {
-        document.getElementById('popup-alert').removeAttribute('style');
-        document.getElementById('myModal').removeAttribute('style');
-        
+    } else if (hideOrshow == 'show') {
+        document.getElementById('popup-alert').style.display = "block";
+        document.getElementById('myModal').style.display = "block";
+
         $("#name-result").text(this._data[0]["name"]);
         $("#code-result").text(this._data[0]["id"] + 25000);
     }
