@@ -18,8 +18,8 @@ $("document").ready(function () {
     // setTimeout(function () {
     // console.log('window.localStorage;', window.localStorage);
     //PopUp('show');
-    console.log('localStorage', localStorage);
-    console.log('localStorage.hideRegisterDialog175', localStorage.hideRegisterDialog175);
+    //console.log('localStorage', localStorage);
+    //console.log('localStorage.hideRegisterDialog175', localStorage.hideRegisterDialog175);
     if (localStorage.hideRegisterDialog175 === undefined || localStorage.hideRegisterDialog175 === 'false') {
         PopUp('show');
     } else {

@@ -11,7 +11,7 @@ function loadXMLDoc(dname) {
 var xmlDoc1 = loadXMLDoc("http://hanhtrinhmouoc.thanhnien.vn/tinrss?type=2"); // XML
 var x2js = new X2JS();
 var jsonObj1 = x2js.xml2json(xmlDoc1); // Convert XML to JSON
-console.log(jsonObj1.rss.channel.item);
+//console.log(jsonObj1.rss.channel.item);
 
 /* Binding */
 rivets.binders.src = function (el, value) {

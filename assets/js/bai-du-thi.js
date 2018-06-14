@@ -11,7 +11,7 @@ function loadXMLDoc(dname) {
 var xmlDoc1 = loadXMLDoc("http://hanhtrinhmouoc.thanhnien.vn/tinrss?type=1"); // XML
 var x2js = new X2JS();
 var jsonObj1 = x2js.xml2json(xmlDoc1); // Convert XML to JSON
-console.log(jsonObj1.rss.channel);
+//console.log(jsonObj1.rss.channel);
 
 /* Binding */
 rivets.binders.src = function (el, value) {
@@ -30,7 +30,7 @@ rivets.formatters.date = function (value) {
 //     items: jsonObj1.rss.channel.item
 // })
 var items_bai_viet = jsonObj1.rss.channel.item.slice(0,6);
-console.log('items_bai_viet',items_bai_viet);
+//console.log('items_bai_viet',items_bai_viet);
 events = {
     prevPage: function (e, model) {
         var numPages = Math.ceil(model.data.length / model.limit);
@@ -49,6 +49,26 @@ events = {
                 model.items.push(model.data[i]);
                 
             }
+
+            if (model.current_page == 1) {
+                //btn-prev.style.visibility = "hidden";
+                document.getElementById("btn-prev").disabled = true;
+
+            } else {
+                //btn-prev.style.visibility = "visible";
+                document.getElementById("btn-prev").disabled = false;
+
+            }
+        
+            if (model.current_page == numPages) {
+                //btn-next.style.visibility = "hidden";
+                document.getElementById("btn-next").disabled = true;
+                
+            } else {
+                //btn-next.style.visibility = "visible";
+                document.getElementById("btn-next").disabled = false;
+            }
+
         }
     },
 
@@ -67,6 +87,25 @@ events = {
             for (var i = (model.current_page - 1) * model.limit; i < (model.current_page * model.limit) && i < model.data.length; i++){
                 model.items.push(model.data[i]);
                 
+            }
+
+           if (model.current_page == 1) {
+                //btn-prev.style.visibility = "hidden";
+                document.getElementById("btn-prev").disabled = true;
+
+            } else {
+                //btn-prev.style.visibility = "visible";
+                document.getElementById("btn-prev").disabled = false;
+
+            }
+        
+            if (model.current_page == numPages) {
+                //btn-next.style.visibility = "hidden";
+                document.getElementById("btn-next").disabled = true;
+                
+            } else {
+                //btn-next.style.visibility = "visible";
+                document.getElementById("btn-next").disabled = false;
             }
         }
       
@@ -136,6 +175,25 @@ controller = {
                 model.items.push(model.data[i]);
                 
             }
+
+            if (model.current_page == 1) {
+                //btn-prev.style.visibility = "hidden";
+                document.getElementById("btn-prev-2").disabled = true;
+
+            } else {
+                //btn-prev.style.visibility = "visible";
+                document.getElementById("btn-prev-2").disabled = false;
+
+            }
+        
+            if (model.current_page == numPages) {
+                //btn-next.style.visibility = "hidden";
+                document.getElementById("btn-next-2").disabled = true;
+                
+            } else {
+                //btn-next.style.visibility = "visible";
+                document.getElementById("btn-next-2").disabled = false;
+            }
         }
     },
 
@@ -154,6 +212,25 @@ controller = {
             for (var i = (model.current_page - 1) * model.limit; i < (model.current_page * model.limit) && i < model.data.length; i++){
                 model.items.push(model.data[i]);
                 
+            }
+
+            if (model.current_page == 1) {
+                //btn-prev.style.visibility = "hidden";
+                document.getElementById("btn-prev-2").disabled = true;
+
+            } else {
+                //btn-prev.style.visibility = "visible";
+                document.getElementById("btn-prev-2").disabled = false;
+
+            }
+        
+            if (model.current_page == numPages) {
+                //btn-next.style.visibility = "hidden";
+                document.getElementById("btn-next-2").disabled = true;
+                
+            } else {
+                //btn-next.style.visibility = "visible";
+                document.getElementById("btn-next-2").disabled = false;
             }
         }
       
