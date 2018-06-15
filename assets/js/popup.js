@@ -52,13 +52,22 @@ function submitData() {
     var id = 0;
     var from = 'anhtuan6294@gmail.com';
     var subject = 'Xác nhận tham gia rút thăm trúng thưởng';
-  
+
+    //get day moment
+    var currentdate = new Date();
+    var datetime = currentdate.getDate() + "/" +
+        (currentdate.getMonth() + 1) + "/" +
+        currentdate.getFullYear() + " @ " +
+        currentdate.getHours() + ":" +
+        currentdate.getMinutes() + ":" +
+        currentdate.getSeconds();
+
     if (name && phone && email) {
         axios.post('http://128.199.153.64:3500/api/Requests', {
             name: name,
             phone: phone,
-            email: email
-
+            email: email,
+            date: datetime
         }).then(function (response) {
             this._data.push(response.data);
             PopUp('hide');
