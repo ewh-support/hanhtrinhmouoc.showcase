@@ -15,7 +15,7 @@ getUrl().then(res => {
         headers: {
             "Authorization": `Bearer ${tokenStr}`
         }
-    });
+    }); 
     return data;
 }).then(res => {
     
@@ -33,7 +33,7 @@ getUrl().then(res => {
         items: res.data
     });
 
-    console.log('res.data', res.data);
+    //console.log('res.data', res.data);
     // console.log('items1', res.data.Url);
 
     document.getElementById("fb-like-1").setAttribute("data-href", res.data.Url);
@@ -74,16 +74,16 @@ var x2js = new X2JS();
 var jsonObj1 = x2js.xml2json(xmlDoc1); // Convert XML to JSON
 
 var list_related_9 = jsonObj1.rss.channel.item.slice(0,9);
-console.log('list_related_9',list_related_9);
+//console.log('list_related_9',list_related_9);
 
 var items = list_related_9.slice(0,3);
 events = {
     prevPage: function (e, model) {
-        console.log('prev');
-        console.log('prev | model.current_page', model.current_page);
+        //console.log('prev');
+        //console.log('prev | model.current_page', model.current_page);
         
         var numPages = Math.ceil(model.data.length / model.limit);
-        console.log('prev | numPages', numPages);
+        //console.log('prev | numPages', numPages);
 
         model.items = [];
         if (model.current_page > 1) {
@@ -120,12 +120,12 @@ events = {
     },
 
     nextPage: function (e, model) {
-        console.log('next');
-        console.log('next | model.current_page', model.current_page);
+        //console.log('next');
+        //console.log('next | model.current_page', model.current_page);
         
         var numPages = Math.ceil(model.data.length / model.limit);
         
-        console.log('next | numPages', numPages);
+        //console.log('next | numPages', numPages);
 
         model.items = [];
         if (model.current_page < numPages) {
