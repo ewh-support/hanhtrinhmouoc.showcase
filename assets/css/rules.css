@@ -19,7 +19,7 @@
     top: 0;
     left: 0;
     background: #fff;
-    opacity: 0.5;
+    opacity: 0;
     transition: 0.4s;
     -webkit-transition: 0.4s;
     z-index: 1;
@@ -128,6 +128,7 @@ li p.checkmark::before {
     background-position: 50% 50%;
     left: 0;
     background-size: cover !important;
+    z-index: -8;
 }
 
 .section__img__inner {
@@ -137,6 +138,7 @@ li p.checkmark::before {
     background-position: 50% 40%;
     -webkit-transition: opacity .3s linear, -webkit-filter .3s linear;
     transition: opacity .3s linear, -webkit-filter .3s linear;
+     z-index: -8;
 }
 
 .section.active .section__img__inner {
