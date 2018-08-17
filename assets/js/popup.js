@@ -20,11 +20,12 @@ $("document").ready(function () {
     //PopUp('show');
     //console.log('localStorage', localStorage);
     //console.log('localStorage.hideRegisterDialog175', localStorage.hideRegisterDialog175);
-    if (localStorage.hideRegisterDialog175 === undefined || localStorage.hideRegisterDialog175 === 'false') {
-        PopUp('show');
-    } else {
-        PopUp('hide');
-    }
+    // if (localStorage.hideRegisterDialog175 === undefined || localStorage.hideRegisterDialog175 === 'false') {
+    //     PopUp('show');
+    // } else {
+    //     PopUp('hide');
+    // }
+    PopUp('hide');
     // localStorage.clear();
     // PopUpAlert('show');
 
